@@ -21,7 +21,7 @@ const removeAllSongs = {
 // Reducers or Reducers functions
 
 // Define reducer
-const reducer = (state=state, action) => {
+const reducer = (state=initialState, action) => {
   switch(action.type) {
     case 'songs/addSong': {
       return [...state, action.payload]
