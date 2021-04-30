@@ -17,3 +17,17 @@ const addNewSong = {
 const removeAllSongs = {
   type: 'songs/removeAll'
 }
+
+// Reducers or Reducers functions
+
+// Define reducer
+const reducer = (state=state, action) => {
+  switch(action.type) {
+    case 'songs/addSong': {
+      return [...state, action.payload]
+    }
+    default: {
+      return state;
+    }
+  }
+}
