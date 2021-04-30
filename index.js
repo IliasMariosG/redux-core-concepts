@@ -35,6 +35,9 @@ const reducer = (state=initialState, action) => {
     case 'songs/removeSong': {
       return state.filter(song => song !== action.payload)
     }
+    case 'songs/removeAll': {
+      return []
+    }
     default: {
       return state;
     }
