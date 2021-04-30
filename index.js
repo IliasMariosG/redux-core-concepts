@@ -18,6 +18,12 @@ const removeAllSongs = {
   type: 'songs/removeAll'
 }
 
+//removing one song from the playlist
+const removeSong = {
+  type: 'songs/removeSong',
+  payload: 'Gasoline'
+}
+
 // Reducers or Reducers functions
 
 // Define reducer
@@ -25,6 +31,9 @@ const reducer = (state=initialState, action) => {
   switch(action.type) {
     case 'songs/addSong': {
       return [...state, action.payload]
+    }
+    case 'songs/removeSong': {
+      return state.filter(song => song !== action.payload)
     }
     default: {
       return state;
