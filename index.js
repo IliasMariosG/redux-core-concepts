@@ -1,5 +1,5 @@
-// Define the state of a playlist
-const state = [
+// Define the state of a playlist as initial state
+const initialState = [
   'Dance me to end of love',
   'Gasoline',
   'Bad guy'
